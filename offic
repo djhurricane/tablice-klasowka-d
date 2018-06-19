@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+
+void sumazlicz(int[],int,int,int &);
+int dana(); 					
+void zlicz(int [],int ,int ,int &) ;
+void wynik(int,int,int);
+
+int main()
+{
+	const int r=7;
+   
+   int x,suma,ile;
+   x=dana();
+
+ 	int tab[r]={4,3,6,3,7,3,4};
+
+	sumazlicz(tab,r,x,suma);
+	zlicz(tab,r,x,ile);
+	wynik(x,suma,ile);
+
+}
+
+//Odczytuje z klawiatury daną wartośc x i zwraca ją po return.   
+int dana()
+  {
+   int x;  
+   cout<<"\n\n Podaj x: ";
+   cin>>x;
+   return x;
+  }  
+  
+//Znajduje liczbę elementów tablicy o wartości x,
+//zwracając wynik przez argument referencyjny int &ile.       
+void sumazlicz(int tab[],int r,int x,int &suma) 
+  {
+   suma=0;                  
+   for(int j=0;j<r;j++)
+     {
+      if(tab[j]==x)suma+=tab[j];
+     }
+   }
+      
+void zlicz(int tab[],int r,int x,int &ile) 
+  {
+   ile=0;                  
+   for(int j=0;j<r;j++)
+     {
+      if(tab[j]==x)ile++;
+     }
+   }
+   
+void wynik(int x,int suma,int ile)
+  {
+   cout<<"\n\n Suma elementow rownych "
+       <<x<<" wynosi " <<suma<<'.';
+   cout<<"\n\n";
+   cout<<"\n\n Ilosc elementow rownych "
+       <<x<<" wynosi " <<ile<<'.';
+   cout<<"\n\n";
+  } 
+
