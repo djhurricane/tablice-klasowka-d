@@ -1,0 +1,70 @@
+#include<iostream>
+using namespace std;
+long sumtab(int [],int);
+int iletab(int [],int);
+
+void sumazlicz(int[],int,int,int &); // linia dodana
+int dana(); 					// linia dodana
+void wynik(int,int);
+
+int main()
+{
+	const int r=7;
+   
+   int x,suma;		// linia dodana
+   x=dana();		// linia dodana
+
+ 	int tab[r]={4,3,6,3,7,3,5};
+
+	sumazlicz(tab,r,x,suma);	// linia dodana
+	wynik(x,suma);
+
+//	cout<<sumtab(tab,r)<<endl;
+//	cout<<iletab(tab,r);
+}
+
+//Odczytuje z klawiatury daną wartośc x i zwraca ją po return.   
+int dana()
+  {
+   int x;  
+   cout<<"\n\n Podaj x: ";
+   cin>>x;
+   return x;
+  }  
+  
+//Znajduje liczbę elementów tablicy o wartości x,
+//zwracając wynik przez argument referencyjny int &ile.       
+void sumazlicz(int t[],int r,int x,int &suma) 
+  {
+   suma=0;                  
+   for(int j=0;j<r;j++)
+     {
+      if(t[j]==x)suma+=t[j];
+     }
+   }
+//Drukuje na ekranie wynik ile dla danej x.
+void wynik(int x,int suma)
+  {
+   cout<<"\n\n Suma elementow rownych "
+       <<x<<" wynosi " <<suma<<'.';
+   cout<<"\n\n\n\n  ";
+  } 
+
+long sumtab(int tab[],int r)
+{
+	long s=0;
+	for (int j=0;j<r;)	s=s+tab[j++];
+	return s;
+}
+
+int iletab(int tab[],int r)
+{
+	int i=0;
+	
+	for (int j=0;j<r;j++) i++;
+			
+	cout<<"Liczba Elementow tablicy: ";
+
+	return i;
+	
+} 
