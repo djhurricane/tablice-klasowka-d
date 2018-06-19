@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+long sumtab(int tab[],int);
+int iletab(int t[],int ile);
+int main()
+{
+	const int r=7;
+	
+	int tab[r]={4,3,6,3,7,6,5};
+	cout<<sumtab(tab,r)<<endl;
+	cout<<iletab(tab,r);
+}
+
+long sumtab(int tab[],int r)
+{
+	long s=0;
+	for (int j=0;j<r;)	s=s+tab[j++];
+	return s;
+}
+
+int iletab(int tab[],int r)
+{
+	
+
+		
+	cout<<"Liczba Elementow tablicy: ";
+		
+	
+	return r;
+	
+} 
