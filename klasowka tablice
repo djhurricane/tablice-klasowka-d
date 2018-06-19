@@ -20,12 +20,12 @@ long sumtab(int tab[],int r)
 
 int iletab(int tab[],int r)
 {
-	
-
+	int i=0;
+	for (int j=0;j<r;j++) i++;
 		
 	cout<<"Liczba Elementow tablicy: ";
 		
 	
-	return r;
+	return i;
 	
 } 
