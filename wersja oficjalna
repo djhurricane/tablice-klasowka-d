@@ -1,0 +1,41 @@
+//sumuj_elem_tab.cpp
+//Przykład programu z funkcją własną
+//sumującą elementy o wartościach parzystych.
+
+#include<iostream>
+using namespace std;
+  
+void oblicz(int[],int,int *);
+void wynik(int);
+
+int main()
+  {
+   //Deklaracja i wstępne zapełnienie tablicy       
+   const int N=10;
+   int tab[N]={-3,8,-2,5,13,-2,7,4,3,22};
+   int suma;
+   oblicz(tab,N,&suma);
+   wynik(suma);
+   system("PAUSE");
+   return 0;
+  }
+
+//Znajduje sumę parzystych elementów tablicy,
+//zwracając wynik przez argument wskaźnikowy int *ws.       
+void oblicz(int t[],int n,int *ws) 
+  {
+   *ws=0;                  
+   for(int j=0;j<n;j++)
+     {
+      if(t[j]%2==0)*ws+=t[j];
+     }
+   }
+
+//Drukuje na ekranie wynik ile dla danej x.
+void wynik(int suma)
+  {
+   cout<<"\n\n Suma elementow parzystych "
+       <<" wynosi " <<suma<<'.';
+   cout<<"\n\n ";
+  } 
+   
